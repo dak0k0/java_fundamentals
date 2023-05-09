@@ -13,6 +13,13 @@ public class Exercise_06 {
     public static void main(String[] args) {
 
         // write code here
+        byte height = 5;
+        float radius = 3.14f;
+        float pi = 3.14f;
 
+        float volume = pi * radius * radius * height;
+        float surfaceArea = 2 * pi * radius * radius + 2 * pi * radius * height;
+
+        System.out.println("the volume is " + volume + " and this surface area is " + surfaceArea);
     }
 }
