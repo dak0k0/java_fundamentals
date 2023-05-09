@@ -14,6 +14,21 @@ public class Exercise_04 {
 
         int i = 1;
         System.out.println("int i is: " + i);
+        long j = 10;
+        System.out.println("long j is: " + j);
+        char k = 'K';
+        System.out.println("char k is: " + k);
+        byte l = 10;
+        System.out.println("byte l is: " + l);
+        short m = 20000;
+        System.out.println("short m is: " + m);
+        boolean o = true;
+        System.out.println("boolean o is: " + o);
+        float p = 2.0f;
+        System.out.println("float p is: " + p);
+        double q = 4.0;
+        System.out.println("double q is: " + q);
+
 
         // write your code below
 
