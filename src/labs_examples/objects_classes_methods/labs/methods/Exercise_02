@@ -23,4 +23,3 @@ Create a new class called MethodTraining.java and in this class please do the fo
     8) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
         instantiate a second array. You must reverse the array in place using only one extra temp variable. Hint: this
         variable is used to temporarily store individual values in the array
-
