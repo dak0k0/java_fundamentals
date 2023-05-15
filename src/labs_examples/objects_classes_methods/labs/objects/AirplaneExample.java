@@ -1,13 +1,35 @@
 package labs_examples.objects_classes_methods.labs.objects;
 
-class Airplane {
-    AirplaneEngine engine;
-    AirplaneChassis chassis;
-    AirplaneWings wings;
-    AirplaneWheels wheels;
+class AirplaneExample{
 
-    double fuelCapacity;
-    double currentFuelLevel;
+    public static void main(String[] args) {
+
+        AirplaneEngine engine = new AirplaneEngine(500);
+        AirplaneChassis chassis = new AirplaneChassis(1000,300);
+        AirplaneWings wings = new AirplaneWings(10000);
+        AirplaneWheels wheels = new AirplaneWheels(2);
+        Airplane airplane = new Airplane(engine, chassis, wings, wheels, 1000, 750);
+
+        System.out.println("This airplane has the following properties:" +
+                                "\n - " + airplane.getEngine().toString() +
+                                "\n - " + airplane.getChassis().toString() +
+                                "\n - " + airplane.getWings().toString() +
+                                "\n - " + airplane.getWheels().toString() +
+                                "\n - Fuel Capacity: " + airplane.getFuelCapacity() +
+                                "\n - Current Fuel: " + airplane.getCurrentFuelLevel());
+
+    }
+
+}
+
+class Airplane {
+    private AirplaneEngine engine;
+    private AirplaneChassis chassis;
+    private AirplaneWings wings;
+    private AirplaneWheels wheels;
+
+    private double fuelCapacity;
+    private double currentFuelLevel;
 
     public Airplane(AirplaneEngine engine, AirplaneChassis chassis, AirplaneWings wings, AirplaneWheels wheels, double fuelCapacity, double currentFuelLevel) {
         this.engine = engine;
@@ -15,6 +37,54 @@ class Airplane {
         this.wings = wings;
         this.wheels = wheels;
         this.fuelCapacity = fuelCapacity;
+        this.currentFuelLevel = currentFuelLevel;
+    }
+
+    public AirplaneEngine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(AirplaneEngine engine) {
+        this.engine = engine;
+    }
+
+    public AirplaneChassis getChassis() {
+        return chassis;
+    }
+
+    public void setChassis(AirplaneChassis chassis) {
+        this.chassis = chassis;
+    }
+
+    public AirplaneWings getWings() {
+        return wings;
+    }
+
+    public void setWings(AirplaneWings wings) {
+        this.wings = wings;
+    }
+
+    public AirplaneWheels getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(AirplaneWheels wheels) {
+        this.wheels = wheels;
+    }
+
+    public double getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(double fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
+    }
+
+    public double getCurrentFuelLevel() {
+        return currentFuelLevel;
+    }
+
+    public void setCurrentFuelLevel(double currentFuelLevel) {
         this.currentFuelLevel = currentFuelLevel;
     }
 
@@ -33,7 +103,7 @@ class Airplane {
 
 class AirplaneEngine{
 
-    double horsepower;
+    private double horsepower;
     public AirplaneEngine(double horsepower){
         this.horsepower = horsepower;
     }
@@ -56,8 +126,8 @@ class AirplaneEngine{
 
 class AirplaneChassis{
 
-    double weight;
-    int capacity;
+    private double weight;
+    private int capacity;
 
     public AirplaneChassis(double weight, int capacity) {
         this.weight = weight;
@@ -91,7 +161,7 @@ class AirplaneChassis{
 
 class AirplaneWings{
 
-    double lift;
+    private double lift;
 
     public AirplaneWings(double lift) {
         this.lift = lift;
@@ -114,7 +184,7 @@ class AirplaneWings{
 }
 
 class AirplaneWheels{
-    double height;
+    private double height;
 
     public AirplaneWheels(double height) {
         this.height = height;
