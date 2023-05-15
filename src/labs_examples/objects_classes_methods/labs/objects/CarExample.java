@@ -73,6 +73,11 @@ class Car {
 
     String color;
 
+    public Car(String model, String color){
+        this.model = model;
+        this.color = color;
+    }
+
     public Car(Engine engine, Stereo stereo, String model, String color){
 
         this.engine = engine;
@@ -83,6 +88,38 @@ class Car {
 
         this.color = color;
 
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Stereo getStereo() {
+        return stereo;
+    }
+
+    public void setStereo(Stereo stereo) {
+        this.stereo = stereo;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
