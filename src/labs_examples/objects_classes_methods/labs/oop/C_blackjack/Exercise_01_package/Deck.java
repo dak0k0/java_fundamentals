@@ -6,10 +6,12 @@ import java.util.Random;
 public class Deck {
 
     // instance variables
-    Card[] cards;
-    ArrayList<Integer> usedCards;
+    Card[] cards = new Card[52];
+    ArrayList<Integer> usedCards = new ArrayList<>();
 
     // constructor
+    public Deck(){}
+
     public Deck(Card[] cards, ArrayList<Integer> usedCards) {
         this.cards = cards;
         this.usedCards = usedCards;
@@ -21,12 +23,11 @@ public class Deck {
         char[] suits = {'♠', '♦', '♥', '♣'};
         int[] ranks = {1,2,3,4,5,6,7,8,9,10,11,12,13};
 
+        int i = 0;
         for(char suit : suits){
             for(int rank : ranks){
-                for(int i = 1; i <= 52; i++){
-                    cards[i].setSuit(suit);
-                    cards[i].setCardValue(rank);
-                }
+                cards[i] = new Card(suit, rank);
+                i++;
             }
         }
     }
@@ -37,7 +38,7 @@ public class Deck {
 
         do {
             Random rand = new Random();
-            chosenCard = rand.nextInt(52) + 1;
+            chosenCard = rand.nextInt(52);
         } while (usedCards.contains(chosenCard));
 
         player.hand.cards.add(cards[chosenCard]);

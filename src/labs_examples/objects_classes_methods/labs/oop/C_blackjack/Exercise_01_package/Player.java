@@ -4,10 +4,13 @@ public class Player {
 
     // instance variables
     String name;
-    Hand hand;
+    Hand hand = new Hand();
     int potValue;
 
-    // constructor
+    // constructors
+
+    public Player(){}
+
     public Player(String name, Hand hand, int potValue) {
         this.name = name;
         this.hand = hand;

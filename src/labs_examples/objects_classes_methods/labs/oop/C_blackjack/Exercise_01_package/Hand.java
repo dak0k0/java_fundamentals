@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Hand {
 
     // instance variables
-    ArrayList<Card> cards;
+    ArrayList<Card> cards = new ArrayList<>();
     int handValue;
 
     // constructor
+    public Hand(){}
+
     public Hand(ArrayList<Card> cards, int handValue) {
         this.cards = cards;
         this.handValue = handValue;
@@ -30,22 +32,5 @@ public class Hand {
 
     public boolean greaterThan21(){
         return handValue > 21;
-    }
-
-    // getters & setters
-    public ArrayList<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
-    }
-
-    public int getHandValue() {
-        return handValue;
-    }
-
-    public void setHandValue(int handValue) {
-        this.handValue = handValue;
     }
 }
