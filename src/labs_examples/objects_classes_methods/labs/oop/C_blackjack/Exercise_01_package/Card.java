@@ -6,6 +6,7 @@ public class Card {
     int cardValue;
     String cardRank;
 
+
     public Card(char suit, int cardValue) {
         this.suit = suit;
         this.cardValue = cardValue;
@@ -13,17 +14,18 @@ public class Card {
 
     public String getRank(){
         if(cardValue == 1){
-            return "A";
+            cardRank = "A";
         } else if(1 < cardValue & cardValue < 11){
             return Integer.toString(cardValue);
         } else if(cardValue == 11){
-            return "Jack";
+            cardRank = "Jack";
         } else if (cardValue == 12){
-            return "Queen";
+            cardRank = "Queen";
         } else if (cardValue == 13){
-            return "King";
+            cardRank = "King";
         } else{
-            return "Invalid card value";
+            cardRank = "Invalid card value";
         }
+        return cardRank;
     }
 }

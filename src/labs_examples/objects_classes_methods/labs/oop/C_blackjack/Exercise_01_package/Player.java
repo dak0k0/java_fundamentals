@@ -8,7 +8,6 @@ public class Player {
     int potValue;
 
     // constructors
-
     public Player(){}
 
     public Player(String name, Hand hand, int potValue) {
