@@ -2,16 +2,24 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack.Exercise_01_p
 
 public class Player {
 
-    private String name;
-    private Hand hand;
-    private int potValue;
+    // instance variables
+    String name;
+    Hand hand;
+    int potValue;
 
+    // constructor
     public Player(String name, Hand hand, int potValue) {
         this.name = name;
-    //    this.hand = hand;
+        this.hand = hand;
         this.potValue = potValue;
     }
 
+    // methods
+    public boolean computerAI(){
+        return hand.handValue < 16;
+    }
+
+    // getters & setters
     public String getName() {
         return name;
     }
