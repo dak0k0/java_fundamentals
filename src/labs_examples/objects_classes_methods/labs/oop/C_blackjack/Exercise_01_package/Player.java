@@ -6,6 +6,7 @@ public class Player {
     String name;
     Hand hand = new Hand();
     int potValue;
+    int betValue;
 
     // constructors
     public Player(){}
@@ -18,7 +19,7 @@ public class Player {
 
     // methods
     public boolean computerAI(){
-        return hand.handValue < 16;
+        return hand.getHandScore() < 16;
     }
 
     // getters & setters
