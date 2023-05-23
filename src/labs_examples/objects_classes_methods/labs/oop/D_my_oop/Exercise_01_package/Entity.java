@@ -9,6 +9,7 @@ public class Entity {
     protected static int level;
     protected static int levelUpHealthModifier = 1;
     protected ArrayList<Item> items = new ArrayList<>();
+    protected Job job;
 
     // constructors
     public Entity(){
